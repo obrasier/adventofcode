@@ -16,7 +16,8 @@ for noun in range(100):
       elif operation == 99:
         break
       else:
-        raise EnvironmentError
+        print('Something went wrong...')
+        sys.exit(0)
     if memory[0] == 19690720:
       print(100 * noun + verb)
       sys.exit(0)

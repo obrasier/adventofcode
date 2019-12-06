@@ -1,13 +1,10 @@
+import sys
+
 with open('input.txt') as f:
   memory = f.read().replace('\n', '').split(',')
 memory = [int(i) for i in memory]
 memory[1] = 12
 memory[2] = 2
-
-p1 = [1,0,0,0,99]
-p2 = [2,3,0,3,99]
-p3 = [2,4,4,5,99,0]
-p4 = [1,1,1,4,99,5,6,0,99]
 
 for i in range(0, len(memory), 4):
   operation = memory[i]
@@ -18,5 +15,6 @@ for i in range(0, len(memory), 4):
   elif operation == 99:
     break
   else:
-    raise EnvironmentError
+    print('Something went wrong...')
+    sys.exit(0)
 print(memory[0])
