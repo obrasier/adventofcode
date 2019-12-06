@@ -7,7 +7,7 @@ total_found = 0
 def has_adjacent(digits, part):
   c = Counter(digits)
   if part == 1:
-    if c.most_common(1)[0][1] >= 2:
+    if max(c.values()) >= 2:
       return True
   else:
     if 2 in c.values():
